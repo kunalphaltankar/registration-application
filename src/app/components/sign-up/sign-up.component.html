@@ -1,2 +1,40 @@
-<p style="font-family: SF Compact Display Regular;"> iii III  sss SSS sign up works!</p>
-<button (click)="signUp()">Sign Up</button>
+<div class="container">
+  <p class="header-1">Q</p>
+  <p class="header-2">
+    Please confirm or edit your contact information, so that we can notify you
+    when you are approved for out BETA.
+  </p>
+  <div class="input-container">
+    <div class="label-input-container">
+      <label class="label">NAME</label>
+      <input
+        class="input read-only"
+        readonly
+        type="text"
+        [(ngModel)]="userData.name"
+      />
+    </div>
+
+    <div class="label-input-container">
+      <label class="label">EMAIL</label>
+      <input
+        class="input read-only"
+        readonly
+        type="text"
+        value="john@requantive.com"
+        [(ngModel)]="userData.email"
+      />
+    </div>
+
+    <div class="label-input-container">
+      <label class="label">PHONE NUMBER</label>
+      <input
+        class="input"
+        type="tel"
+        maxlength="10"
+        [(ngModel)]="userData.phone"
+      />
+    </div>
+  </div>
+  <button class="button" (click)="signUp()">SIGN UP</button>
+</div>

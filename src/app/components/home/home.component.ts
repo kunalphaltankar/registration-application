@@ -7,9 +7,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.less'],
 })
 export class HomeComponent implements OnInit {
+  backimage = 'src/assets/images/san-francisco.png';
   constructor(private router: Router) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log('ngOnInit HomeComponent');
+  }
 
   signUpWithLinkedIn() {
     this.router.navigateByUrl('signup');
